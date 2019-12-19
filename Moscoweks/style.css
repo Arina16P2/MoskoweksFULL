@@ -1,0 +1,706 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 14px;
+    color: #6c7279;
+     -webkit-font-smoothing: antialiased;
+    
+    background: #fefefc;
+    
+    /*background: #000;*/
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+p{
+    margin: 0 0 10px 0;
+}
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Heаder */
+
+.header{
+    width: 100%;
+    height: 100px;
+   position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between; /*между элементами будет пустое место*/
+    align-items: center;
+     padding: 35px 0;
+    
+    border-bottom: 1px solid #839bd4;
+}
+
+/*Nav */
+
+.nav{
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.75;
+    
+    transition: opacity .2s linear;
+}
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link:hover{
+    opacity: 1;
+  text-decoration: underline;
+}
+
+
+/* Intro */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+  /*  background: #4477cd /*url(../img/intro-bg.jpg) center no-repeat / cover;*/
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    
+    text-align: center;
+}
+
+.intro__title{
+    margin: 0 0 30px ;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 65px;
+    line-height: 1.1;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro__subtitle{
+    margin-bottom: 60px;
+    font-size:22px;
+    color:#fff;
+    line-height: 1.5;
+    font-weight: 400;
+    
+}
+
+
+/*Button*/
+
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px;
+    
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+
+    
+    transition: background .1s
+        linear;
+    
+}
+.btn--blue{
+    background-color: #0e3bc2;
+}
+.btn--blue:hover{
+    background-color: #0040ff;
+}
+.btn--long{
+    min-width: 280px;
+}
+
+
+
+/*Sale*/
+
+
+.sale-wrap {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  padding: 30px 40px;
+  margin: 50px auto 0;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sale-wrap:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 760px;
+  height: 760px;
+  background: rgb(7,18,140);
+  border-radius: 50%;
+}
+.sale-inner {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(7,18,140), rgb(0,127,255));
+  box-shadow: 0 10px 45px rgba(0,127,255, 0.3), 0 -10px 45px rgba(0,127,255, 0.3);
+}
+.sale-inner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-bottom-right-radius: 150px;
+  box-shadow: 3px 3px 20px rgba(0,0,0,.06);
+}
+.sale-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 40px 10px 0 40px;
+  box-sizing: border-box;
+}
+.sale-text h2 {
+  margin: 0 0 5px;
+  color: #2d3033;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+text-transform: uppercase;
+  text-align: center;
+    font-weight: 600;
+}
+.sale-text p {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #082fa4;
+ text-align: center;
+}
+.sale-text p span {
+  font-size: 30px;
+  ont-weight: normal;
+}
+.button {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #082fa4;
+  
+    
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 1px solid #082fa4;
+  text-align: center;
+  display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    
+    
+    
+    
+    
+}
+.sale-text .sale-text-info {
+  color: #2d3033;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+
+
+
+
+/*Eks*/
+
+
+.eks{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+    
+}
+
+.eks--item{
+    width: 33.33333%;
+    padding: 0 30px;
+    margin: 25px 0;
+    
+    text-align: center;
+}
+
+.eks--icon{
+    margin-bottom: 10px
+}
+
+.eks--title{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+.eks--text{
+    font-size:14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+
+
+/*Dos*/
+
+.dos{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.dos--item{
+    width: 25%;
+    height: 350px;
+    
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.dos--item:hover .dos--content{
+    opacity: 1;
+}
+
+
+.dos--img{
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.dos--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(30,48,218, 0.8);
+    opacity: 0;
+        
+    text-align: center; 
+    
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+    
+    transition: opacity 0.2s linear;
+}
+
+.dos--title{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.dos--text{
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/*Gid*/
+
+.gid{
+    margin: 200px, 0;
+    
+}
+
+.gid--inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    
+}
+
+.gid--item{
+    margin-top: 100px;
+    width: 25%;
+    padding:  0 15px  ;
+    margin-bottom: 30px;
+}
+
+.gid--img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.gid--name{
+    margin-bottom: 8px;
+   font-size: 22px;
+    color: #2d3033;
+    
+}
+
+.gid--prof{
+    margin-bottom: 15px;
+    font-size: 13px;
+    color:#082fa4;
+    text-transform: uppercase;
+}
+
+.gid--text{
+     margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    
+    color: #6c7279;
+}
+
+
+/*Otz*/
+.otz{
+    overflow: hidden;
+    background-color: #082fa4;
+}
+
+
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
+.otz--item{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.otz--photo{
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.otz--img{
+    position: absolute;
+    top:50%;
+    right: 0;
+    z-index: 1;
+    
+    transform: translateY(-50%)
+}
+
+.otz--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+
+.otz--text{
+    margin-bottom: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.otz--name{
+    font-size:13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
+
+
+
+/*Zakaz*/
+
+
+.zakaz{
+    margin-top: 50px;
+    margin: 90px,0;
+    text-align: center;  
+    
+}
+
+.zakaz--title{
+    margin-bottom: 5px;
+    font-size:28px;
+    color: #2d3033;
+    font-weight: 400;
+}
+.zakaz--text{
+    margin-bottom: 30px;
+    font-size:13px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+
+/*Footer*/
+
+.footer{
+    margin-top: 50px;
+    
+    background-color:#0e3bc2;
+    
+}
+
+.footer--inner{
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer--block{
+    width: 33.33333%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+
+.footer--title{
+    margin-bottom: 10px;
+    font-size:14px;
+    font-weight: 700;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.footer--text{
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    color: rgba(255,255,255,0.5);
+    
+}
+
+.footer--copyright{
+    padding: 20px 0;
+    background-color: #082fa4;
+}
+.copyright--text{
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #808080
+    
+}
+
+/* Social*/
+
+.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+
+    background-color: #fff;
+    border: 1px solid #e8ecee;
+
+    transition: background .1s linear;
+}
+
+.social--item:hover {
+    background-color: #e8ecee;
+}
+
+.social--item:hover .social--icon {
+    fill: #000;
+}
+
+.social--footer .social--item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 3px;
+}
+
+.social--footer .social--item:hover {
+    background-color: #fff;
+}
+
+.social--icon {
+    display: block;
+    height: 18px;
+
+    fill: #c6cacc;
+
+    transition: fill .1s linear;
+}
+
+.social--footer .social--icon {
+    fill: #fff;
+}
+
+
+/*Otz butstrap*/
+
+
+.row{
+    margin-top: 50px;
+}
+
+
+.otz--zag{
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #2d3033;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
